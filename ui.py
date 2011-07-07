@@ -8,7 +8,7 @@
 ###########################################################################
 
 import wx
-import options
+import config
 
 import gettext
 _ = gettext.gettext
@@ -65,6 +65,6 @@ class pymnui ( wx.Frame ):
 		pass
 	
 	def sendText( self, event ):
-		output = "<%s> %s\n" % (options.nick, self.txt_chatbox.GetValue())
+		output = "<%s> %s\n" % (config.nick, self.txt_chatbox.GetValue())
 		self.txt_window.AppendText(output)
 		self.txt_chatbox.Clear()
