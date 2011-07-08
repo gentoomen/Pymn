@@ -37,7 +37,7 @@ class pymnui ( wx.Frame ):
 		
 		bSizer1.Add( bSizer2, 0, wx.EXPAND, 5 )
 		
-		self.txt_window = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_AUTO_URL|wx.TE_CHARWRAP|wx.TE_MULTILINE|wx.TE_READONLY|wx.TE_WORDWRAP )
+		self.txt_window = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_AUTO_URL|wx.TE_MULTILINE|wx.TE_READONLY|wx.TE_WORDWRAP )
 		bSizer1.Add( self.txt_window, 1, wx.ALL|wx.EXPAND, 5 )
 		
 		self.txt_chatbox = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_PROCESS_ENTER )
