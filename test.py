@@ -1,12 +1,13 @@
 from connection import Connection
+from testconfig import TestConfig
 
-host = "irc.rizon.net"
-port = 6667
+host = TestConfig.host
+port = TestConfig.port
 
 conn = Connection(host, port, "test8888", "test", "test", "test")
 
-conn.send("NICK test123456\r\n")
-conn.send("USER test test test :test\r\n")
+conn.send("NICK " + TestConfig.nickname)
+conn.send("USER " + TestConfig.username + " " + TestConfig.hostname + " " + TestConfig.servername + " :" + TestConfig. realname)
 
 conn.start()
 
