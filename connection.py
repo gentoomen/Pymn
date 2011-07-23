@@ -3,28 +3,18 @@ import threading
 import time
 
 class Connection (threading.Thread):
-
-  host = None #server hostname
-  port = None #server port
-  sock = None #socket object to connect to server
-
-  username = None
-  hostname = None
-  servername = None
-  realname = None
-
-  buffer = None #buffer used to store incomplete lines
+  """Holds information about and performs data transfer of a socket."""
 
   def __init__(self, host, port, username, hostname, servername, realname):
-    self.host = host
-    self.port = port
+    self.host = host # Server hostname
+    self.port = port # Sever port number
 
     self.username = username
     self.hostname = hostname
     self.servername = servername
     self.realname = realname
 
-    self.buffer = ''
+    self.buffer = '' # Stores incomplete lines
   
     #initialize connection
     self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
